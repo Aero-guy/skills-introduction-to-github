@@ -1,0 +1,59 @@
+# 1 - Basic Calculator
+# 2 - Weight Converter
+
+"""import math
+num1= float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+operator = input("Choose the operator [+,-,*,/,power,sqrt]: ")
+if operator == "+":
+    result = num1 + num2
+    print(round(result,2))
+elif operator == "-":
+    result = num1 - num2
+    print(round(result,2))
+elif operator == "*":
+    result = num1 * num2
+    print(round(result,2))
+elif operator == "/":
+    result = num1 / num2
+    print(round(result,2))
+elif operator == "power":
+    result = pow(num1 ,num2)
+    print(round(result,2))
+elif operator == "sqrt":
+    result = math.sqrt(num1)
+    result1 = math.sqrt(num2)
+    print(round(result,2))
+    print(round(result1,2))
+else:
+    print(f"{operator} is not an valid operator")
+    print("Please enter the correct one") """
+
+# Weight Converter
+import math
+weight = float(input("Enter the weight value: "))
+wgt_unit = input("What is the unit of weight: ")
+unit = input("Enter the unit to be converted to: ")
+if wgt_unit == "kg" or wgt_unit == "kgs":
+    if unit == "pounds" or unit == "lbs":
+        weight = weight*2.205
+        print(f"The weight in {unit} is {round(weight , 3)} lbs")
+    elif unit == "grams" or unit == "g":
+        weight = weight * 1000
+        print(f"The weight in {unit} is {round(weight , 3)} grams")
+elif wgt_unit == "lbs" or wgt_unit == "lb":
+    if unit == "kilogram" or unit == "kgs":
+        weight = weight * 0.453592
+        print(f"The weight in {unit} is {round(weight , 3)} kgs")
+    elif unit == "grams" or unit == "g":
+        weight = weight * 453.592
+        print(f"The weight in {unit} is {round(weight , 3)} grams")
+elif wgt_unit == "g":
+    if unit == "pounds" or unit == "lbs":
+        weight = weight/453.592
+        print(f"The weight in {unit} is {round(weight , 3)} lbs")
+    elif unit == "kilogram" or unit == "kgs":
+        weight = weight / 1000
+        print(f"The weight in {unit} is {round(weight , 3)} kgs")
+else: 
+    print(f"{unit} is not an appropriate unit for conversion")
